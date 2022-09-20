@@ -76,6 +76,12 @@ spring:
   config:
     activate:
       on-profile: mysql
+  jms:
+    servicebus:
+      # connection-string: ${spring.jms.servicebus.connection-string}
+      connection-string: Endpoint=sb://springappsns51d4bd.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=51ezFkz/tAOJH/L2WrQBxthxh6TfGOcoASv+kUdoZfk=
+      idle-timeout: 60000
+      pricing-tier: premium
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
