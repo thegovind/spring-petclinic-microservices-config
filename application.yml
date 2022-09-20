@@ -79,7 +79,7 @@ spring:
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
-    url: jdbc:mysql://sclabm-j7tpluyuoterm.mysql.database.azure.com:3306/useSSL=true
+    url: jdbc:mysql://sclabm-j7tpluyuoterm.mysql.database.azure.com:3306/petclinic?useSSL=true
     username: sqlAdmin@sclabm-j7tpluyuoterm
     password: super$ecr3t
     initialization-mode: ALWAYS
