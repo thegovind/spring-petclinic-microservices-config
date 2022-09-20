@@ -89,6 +89,17 @@ spring:
     username: myadmin@springappsmysql51d4bd
     password: CEVtNdBw25TtuuqV1N
     initialization-mode: ALWAYS
+  kafka:
+    bootstrap-servers: springappseh51d4bd.servicebus.windows.net:9093
+    client-id: first-service
+    group-id: $Default
+    properties:
+      sasl.jaas.config: 
+      sasl.mechanism: PLAIN
+      security.protocol: SASL_SSL
+      spring.json:
+        use.type.headers: false
+        value.default.type: com.targa.labs.dev.telemetrystation.Message
   # cloud:
   #   azure:
   #     keyvault:
