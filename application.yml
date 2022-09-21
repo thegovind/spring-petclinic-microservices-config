@@ -94,7 +94,8 @@ spring:
     client-id: first-service
     group-id: $Default
     properties:
-      sasl.jaas.config: 
+      # sasl.jaas.config: 
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="Endpoint=sb://springappseh51d4bd.servicebus.windows.net/;SharedAccessKeyName=listensendrule;SharedAccessKey=jJdpf+ALTlsRjIz5IVuKAT7tq831NLYbnUSuubAfH9k=";
       sasl.mechanism: PLAIN
       security.protocol: SASL_SSL
       spring.json:
