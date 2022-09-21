@@ -86,8 +86,8 @@ spring:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
     url: jdbc:mysql://springappsmysql51d4bd.mysql.database.azure.com:3306/petclinic?useSSL=true
-    username: myadmin@springappsmysql51d4bd
-    password: CEVtNdBw25TtuuqV1N
+    # username: myadmin@springappsmysql51d4bd
+    # password: CEVtNdBw25TtuuqV1N
     initialization-mode: ALWAYS
   kafka:
     bootstrap-servers: springappseh51d4bd.servicebus.windows.net:9093
@@ -101,12 +101,12 @@ spring:
       spring.json:
         use.type.headers: false
         value.default.type: com.targa.labs.dev.telemetrystation.Message
-  # cloud:
-  #   azure:
-  #     keyvault:
-  #       secret:
-  #         property-source-enabled: true
-  #         property-sources:
-  #           - name: key-vault-property-source-1
-  #             endpoint: https://springappskv51d4bd.vault.azure.net/
-  #             credential.managed-identity-enabled: true
+  cloud:
+    azure:
+      keyvault:
+        secret:
+          property-source-enabled: true
+          property-sources:
+            - name: key-vault-property-source-1
+              endpoint: https://springappskv51d4bd.vault.azure.net/
+              credential.managed-identity-enabled: true
